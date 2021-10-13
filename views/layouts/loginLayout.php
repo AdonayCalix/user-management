@@ -8,7 +8,7 @@ use yii\helpers\Html;
 /* @var $content string */
 
 $this->title = UserManagementModule::t('front', 'Authorization');
-BootstrapAsset::register($this);
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
