@@ -6,7 +6,7 @@
 
 use webvimark\modules\UserManagement\models\rbacDB\AuthItemGroup;
 use webvimark\modules\UserManagement\UserManagementModule;
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\ActiveForm;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 ?>
@@ -40,3 +40,11 @@ use yii\helpers\Html;
 		</div>
 	</div>
 <?php ActiveForm::end() ?>
+
+<?php
+$script = <<< JS
+$(':input').attr("autocomplete", "off");
+JS;
+$this->registerJs($script);
+?>
+

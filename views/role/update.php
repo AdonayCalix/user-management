@@ -12,12 +12,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
-<h2 class="lte-hide-title"><?= $this->title ?></h2>
+<div class="mb-3">
+    <h1 class="h3 d-inline align-middle"><?= $this->title ?></h1>
+</div>
 
-<div class="panel panel-default">
-	<div class="panel-body">
-		<?= $this->render('_form', [
-			'model'=>$model,
-		]) ?>
-	</div>
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12">
+                <?= $this->render('_form', compact('model')) ?>
+            </div>
+        </div>
+    </div>
 </div>
