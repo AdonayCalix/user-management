@@ -8,9 +8,9 @@
 use webvimark\modules\UserManagement\components\GhostHtml;
 use webvimark\modules\UserManagement\models\rbacDB\Role;
 use webvimark\modules\UserManagement\UserManagementModule;
-use yii\bootstrap\BootstrapPluginAsset;
+use yii\bootstrap5\BootstrapPluginAsset;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
+use yii\bootstrap5\Html;
 
 BootstrapPluginAsset::register($this);
 $this->title = UserManagementModule::t('back', 'Roles and permissions for user:') . ' ' . $user->username;
@@ -29,13 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="row">
 	<div class="col-sm-4">
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card">
+			<div class="card-header">
 				<strong>
-					<span class="glyphicon glyphicon-th"></span> <?= UserManagementModule::t('back', 'Roles') ?>
+					<h4 class="glyphicon glyphicon-th"></h4> <?= UserManagementModule::t('back', 'Roles') ?>
 				</strong>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 
 				<?= Html::beginForm(['set-roles', 'id'=>$user->id]) ?>
 
@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					</label>
 
 					<?= GhostHtml::a(
-						'<span class="glyphicon glyphicon-edit"></span>',
+						'<i class="align-middle" data-feather="edit-3"></i>',
 						['/user-management/role/view', 'id'=>$aRole['name']],
 						['target'=>'_blank']
 					) ?>
@@ -67,7 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				<?php if ( Yii::$app->user->isSuperadmin OR Yii::$app->user->id != $user->id ): ?>
 
 					<?= Html::submitButton(
-						'<span class="glyphicon glyphicon-ok"></span> ' . UserManagementModule::t('back', 'Save'),
+						'<i class="align-middle" data-feather="check-circle"></i> ' . UserManagementModule::t('back', 'Save'),
 						['class'=>'btn btn-primary btn-sm']
 					) ?>
 				<?php else: ?>
@@ -83,20 +83,20 @@ $this->params['breadcrumbs'][] = $this->title;
 	</div>
 
 	<div class="col-sm-8">
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card">
+			<div class="card-header">
 				<strong>
 					<span class="glyphicon glyphicon-th"></span> <?= UserManagementModule::t('back', 'Permissions') ?>
 				</strong>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 
 				<div class="row">
 					<?php foreach ($permissionsByGroup as $groupName => $permissions): ?>
 
 						<div class="col-sm-6">
 							<fieldset>
-								<legend><?= $groupName ?></legend>
+								<h3><?= $groupName ?></h3>
 
 								<ul>
 									<?php foreach ($permissions as $permission): ?>
@@ -104,7 +104,7 @@ $this->params['breadcrumbs'][] = $this->title;
 											<?= $permission->description ?>
 
 											<?= GhostHtml::a(
-												'<span class="glyphicon glyphicon-edit"></span>',
+												'<i class="align-middle" data-feather="edit-3"></i>',
 												['/user-management/permission/view', 'id'=>$permission->name],
 												['target'=>'_blank']
 											) ?>

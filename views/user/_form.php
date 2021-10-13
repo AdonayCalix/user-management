@@ -2,8 +2,8 @@
 
 use webvimark\modules\UserManagement\models\User;
 use webvimark\modules\UserManagement\UserManagementModule;
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\ActiveForm;
 use webvimark\extensions\BootstrapSwitch\BootstrapSwitch;
 
 /**
@@ -71,3 +71,12 @@ use webvimark\extensions\BootstrapSwitch\BootstrapSwitch;
 </div>
 
 <?php BootstrapSwitch::widget() ?>
+
+
+<?php
+$script = <<< JS
+$(':input').attr("autocomplete", "off");
+JS;
+$this->registerJs($script);
+?>
+

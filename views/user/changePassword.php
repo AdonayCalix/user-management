@@ -1,8 +1,8 @@
 <?php
 
 use webvimark\modules\UserManagement\UserManagementModule;
-use yii\bootstrap\ActiveForm;
-use yii\helpers\Html;
+use yii\bootstrap5\ActiveForm;
+use yii\bootstrap5\Html;
 
 /**
  * @var yii\web\View $this
@@ -18,8 +18,8 @@ $this->params['breadcrumbs'][] = UserManagementModule::t('back', 'Changing passw
 
 	<h2 class="lte-hide-title"><?= $this->title ?></h2>
 
-	<div class="panel panel-default">
-		<div class="panel-body">
+	<div class="card">
+		<div class="card-body">
 
 			<div class="user-form">
 
