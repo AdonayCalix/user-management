@@ -1,8 +1,8 @@
 <?php
 
 use webvimark\modules\UserManagement\UserManagementModule;
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\ActiveForm;
 
 /**
  * @var yii\web\View $this
@@ -42,4 +42,12 @@ use yii\bootstrap\ActiveForm;
 	<?php ActiveForm::end(); ?>
 
 </div>
+
+<?php
+$script = <<< JS
+$(':input').attr("autocomplete", "off");
+JS;
+$this->registerJs($script);
+?>
+
 
