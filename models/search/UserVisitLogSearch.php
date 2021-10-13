@@ -42,7 +42,7 @@ class UserVisitLogSearch extends UserVisitLog
 		$dataProvider = new ActiveDataProvider([
 			'query' => $query,
 			'pagination' => [
-				'pageSize' => Yii::$app->request->cookies->getValue('_grid_page_size', 20),
+				'pageSize' => 10,
 			],
 			'sort'=>[
 				'defaultOrder'=>['id'=> SORT_DESC],
