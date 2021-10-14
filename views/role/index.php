@@ -1,4 +1,5 @@
 <?php
+
 use webvimark\extensions\GridBulkActions\GridBulkActions;
 use webvimark\extensions\GridPageSize\GridPageSize;
 use webvimark\modules\UserManagement\components\GhostHtml;
@@ -38,21 +39,25 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <div class="row">
             <?php Pjax::begin([
-                'id'=>'role-grid-pjax',
+                'id' => 'role-grid-pjax',
             ]) ?>
             <?= GridView::widget([
-                'id'=>'role-grid',
+                'id' => 'role-grid',
                 'dataProvider' => $dataProvider,
                 'filterModel' => $searchModel,
+                'responsive' => true,
+                'bootstrap' => '4.x',
+                'hover' => true,
+                'bsVersion' => '4.x',
                 'columns' => [
-                    ['class' => 'yii\grid\SerialColumn', 'options'=>['style'=>'width:10px'] ],
+                    ['class' => 'yii\grid\SerialColumn', 'options' => ['style' => 'width:10px']],
 
                     [
-                        'attribute'=>'description',
-                        'value'=>function(Role $model){
-                            return Html::a($model->description, ['view', 'id'=>$model->name], ['data-pjax'=>0]);
+                        'attribute' => 'description',
+                        'value' => function (Role $model) {
+                            return Html::a($model->description, ['view', 'id' => $model->name], ['data-pjax' => 0]);
                         },
-                        'format'=>'raw',
+                        'format' => 'raw',
                     ],
                     'name',
                     [
@@ -62,10 +67,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ]); ?>
             <?php Pjax::end() ?>
         </div>
-
     </div>
 </div>
-
 
 <?php
 $script = <<< JS

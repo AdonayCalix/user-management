@@ -1,11 +1,9 @@
 <?php
 
-use webvimark\extensions\DateRangePicker\DateRangePicker;
 use webvimark\modules\UserManagement\UserManagementModule;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
-use webvimark\extensions\GridPageSize\GridPageSize;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 
 /**
  * @var yii\web\View $this
@@ -20,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="user-visit-log-index">
 
     <div class="mb-3">
-        <h3 class="h3 d-inline align-middle"><?= $this->title?></h3>
+        <h3 class="h3 d-inline align-middle"><?= $this->title ?></h3>
     </div>
 
     <div class="card">
@@ -35,14 +33,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= GridView::widget([
                         'id' => 'user-visit-log-grid',
                         'dataProvider' => $dataProvider,
-                        'pager' => [
-                            'options' => ['class' => 'pagination pagination-sm'],
-                            'hideOnSinglePage' => true,
-                            'lastPageLabel' => '>>',
-                            'firstPageLabel' => '<<',
-                        ],
-                        'layout' => '{items}<div class="row"><div class="col-sm-8">{pager}</div><div class="col-sm-4 text-right">{summary}</div></div>',
                         'filterModel' => $searchModel,
+                        'floatHeader' => true,
+                        'floatHeaderOptions' => ['top' => '50'],
                         'columns' => [
                             ['class' => 'yii\grid\SerialColumn', 'options' => ['style' => 'width:10px']],
 

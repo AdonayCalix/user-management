@@ -47,6 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				'id'=>'user-grid',
 				'dataProvider' => $dataProvider,
 				'filterModel' => $searchModel,
+                'bsVersion' => '4.x',
 				'columns' => [
 					['class' => 'yii\grid\SerialColumn', 'options'=>['style'=>'width:10px'] ],
 
@@ -102,9 +103,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					],
 				],
 			]); ?>
-
 			<?php Pjax::end() ?>
-
 		</div>
 	</div>
 </div>

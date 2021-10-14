@@ -48,6 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id' => 'permission-grid',
                     'dataProvider' => $dataProvider,
                     'filterModel' => $searchModel,
+                    'bsVersion' => '4.x',
                     'columns' => [
                         ['class' => 'yii\grid\SerialColumn', 'options' => ['style' => 'width:10px']],
 
