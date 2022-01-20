@@ -1,7 +1,7 @@
 <?php
 
 use webvimark\modules\UserManagement\UserManagementModule;
-use yii\bootstrap5\Html;
+use yii\bootstrap4\Html;
 use yii\widgets\DetailView;
 
 /**

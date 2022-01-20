@@ -8,7 +8,7 @@
 use webvimark\modules\UserManagement\components\GhostHtml;
 use webvimark\modules\UserManagement\models\rbacDB\Role;
 use webvimark\modules\UserManagement\UserManagementModule;
-use yii\bootstrap5\BootstrapPluginAsset;
+use yii\bootstrap4\BootstrapPluginAsset;
 use yii\helpers\ArrayHelper;
 use yii\bootstrap5\Html;
 
