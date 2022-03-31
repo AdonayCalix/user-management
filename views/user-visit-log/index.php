@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'filterModel' => $searchModel,
                         'floatHeader' => true,
                         'headerContainer' => ['class' => ''],
+                        'condensed' => true,
                         'floatHeaderOptions' => ['top' => '50'],
                         'columns' => [
                             ['class' => 'yii\grid\SerialColumn', 'options' => ['style' => 'width:10px']],

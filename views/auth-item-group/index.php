@@ -49,6 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'dataProvider' => $dataProvider,
                         'filterModel' => $searchModel,
                         'headerContainer' => ['class' => ''],
+                        'condensed' => true,
                         'columns' => [
                             ['class' => 'yii\grid\SerialColumn', 'options' => ['style' => 'width:10px']],
                             [
