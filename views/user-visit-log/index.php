@@ -77,6 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php
 $script = <<< JS
 $(':input').attr("autocomplete", "off");
+$("colgroup").remove();
 JS;
 $this->registerJs($script);
 ?>
