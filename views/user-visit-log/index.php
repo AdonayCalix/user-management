@@ -35,6 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'dataProvider' => $dataProvider,
                         'filterModel' => $searchModel,
                         'floatHeader' => true,
+                        'headerContainer' => ['class' => ''],
                         'floatHeaderOptions' => ['top' => '50'],
                         'columns' => [
                             ['class' => 'yii\grid\SerialColumn', 'options' => ['style' => 'width:10px']],

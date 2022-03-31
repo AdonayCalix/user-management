@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'dataProvider' => $dataProvider,
                 'filterModel' => $searchModel,
                 'responsive' => true,
-                'bootstrap' => '4.x',
+                'headerContainer' => ['class' => ''],
                 'hover' => true,
                 'bsVersion' => '4.x',
                 'columns' => [

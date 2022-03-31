@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				'id'=>'user-grid',
 				'dataProvider' => $dataProvider,
 				'filterModel' => $searchModel,
-                'bsVersion' => '4.x',
+                'headerContainer' => ['class' => ''],
 				'columns' => [
 					['class' => 'yii\grid\SerialColumn', 'options'=>['style'=>'width:10px'] ],
 
